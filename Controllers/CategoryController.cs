@@ -4,7 +4,9 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using Products.Models;
+using INV.Models;
+using INV.DataProvider;
+
 
 namespace Products.Controllers
 {
@@ -47,10 +49,13 @@ namespace Products.Controllers
                 var cat = DataProvider.Categories.Where(x => x.category_id == id).FirstOrDefault();
                 if (cat != null)
                 {
-                    DataProvider.Categories.Remove(cat);
+                DataProvider.Items.RemoveAll(i => i.category_id == id);
+
+                DataProvider.Categories.Remove(cat);
                     return true;                                      
                 }
                 return false;
+
             }
         
     

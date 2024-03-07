@@ -4,7 +4,8 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using Products.Models;
+using INV.Models;
+using INV.DataProvider;
 
 namespace Products.Controllers
 {
@@ -25,6 +26,10 @@ namespace Products.Controllers
         // POST api/values
         public bool Post([FromBody] Item value)
         {
+            if (!CategoryExists(value.category_id))
+            {
+                return false;
+            }
             DataProvider.Items.Add(value);
             return true;
         }
@@ -32,6 +37,10 @@ namespace Products.Controllers
         // PUT api/values/5
         public bool Put(int id, [FromBody] Item value)
         {
+            if (!CategoryExists(value.category_id))
+            {
+                return false;
+            }
             var item = DataProvider.Items.Where(x => x.item_id == id).FirstOrDefault();
             if (item != null)
             {
@@ -56,6 +65,11 @@ namespace Products.Controllers
                 return true;
             }
             return false;
+        }
+
+        private bool CategoryExists(int categoryId)
+        {
+            return DataProvider.Categories.Any(c => c.category_id == categoryId);
         }
     }
 }

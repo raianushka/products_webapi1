@@ -30,6 +30,10 @@ namespace Products.Controllers
             {
                 return false;
             }
+             if (DataProvider.Items.Any(x => x.item_id == value.item_id && x.item_id != id))
+            {
+            return false;
+            }
             DataProvider.Items.Add(value);
             return true;
         }

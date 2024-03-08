@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -27,8 +27,13 @@ namespace Products.Controllers
             // POST api/values
             public bool Post([FromBody] Category value)
             {
-                DataProvider.Categories.Add(value);
-                return true;
+            if (DataProvider.Categories.Any(x => x.category_id == value.category_id))
+            {
+                return false;
+            }
+            DataProvider.Categories.Add(value);
+
+            return true;
             }
 
             // PUT api/values/5
@@ -37,8 +42,19 @@ namespace Products.Controllers
                 var cat = DataProvider.Categories.Where(x => x.category_id == id).FirstOrDefault();
                 if (cat != null)
                 {
-                    cat.category_name = value.category_name;
-                    return true;
+                cat.category_name = value.category_name;
+                //If category name is changed then update the name in invoice as well 
+                foreach (var invoice in DataProvider.Invoices)
+                {
+                    foreach (var item in invoice.ItemsList)
+                    {
+                        if (item.category_id == id)
+                        {
+                            item.category_name = value.category_name;
+                        }
+                    }
+                }
+                return true;
                 }
                 return false;
             }

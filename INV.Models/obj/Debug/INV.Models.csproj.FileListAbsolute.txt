@@ -1,0 +1,6 @@
+C:\Users\HKRP\source\repos\Products\INV.Models\bin\Debug\INV.Models.dll
+C:\Users\HKRP\source\repos\Products\INV.Models\bin\Debug\INV.Models.pdb
+C:\Users\HKRP\source\repos\Products\INV.Models\obj\Debug\INV.Models.csproj.AssemblyReference.cache
+C:\Users\HKRP\source\repos\Products\INV.Models\obj\Debug\INV.Models.csproj.CoreCompileInputs.cache
+C:\Users\HKRP\source\repos\Products\INV.Models\obj\Debug\INV.Models.dll
+C:\Users\HKRP\source\repos\Products\INV.Models\obj\Debug\INV.Models.pdb

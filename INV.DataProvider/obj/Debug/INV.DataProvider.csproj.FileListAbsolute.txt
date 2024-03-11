@@ -1,0 +1,9 @@
+C:\Users\HKRP\source\repos\Products\INV.DataProvider\bin\Debug\INV.DataProvider.dll
+C:\Users\HKRP\source\repos\Products\INV.DataProvider\bin\Debug\INV.DataProvider.pdb
+C:\Users\HKRP\source\repos\Products\INV.DataProvider\bin\Debug\INV.Models.dll
+C:\Users\HKRP\source\repos\Products\INV.DataProvider\bin\Debug\INV.Models.pdb
+C:\Users\HKRP\source\repos\Products\INV.DataProvider\obj\Debug\INV.DataProvider.csproj.AssemblyReference.cache
+C:\Users\HKRP\source\repos\Products\INV.DataProvider\obj\Debug\INV.DataProvider.csproj.CoreCompileInputs.cache
+C:\Users\HKRP\source\repos\Products\INV.DataProvider\obj\Debug\INV.DataProvider.csproj.CopyComplete
+C:\Users\HKRP\source\repos\Products\INV.DataProvider\obj\Debug\INV.DataProvider.dll
+C:\Users\HKRP\source\repos\Products\INV.DataProvider\obj\Debug\INV.DataProvider.pdb
